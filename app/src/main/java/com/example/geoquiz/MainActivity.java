@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -77,7 +78,8 @@ public class MainActivity extends AppCompatActivity {
             messageResId = R.string.incorrect_toast;
         }
 
-        Toast.makeText(this, messageResId, Toast.LENGTH_SHORT)
-                .show();
+        Toast toast = Toast.makeText(this, messageResId, Toast.LENGTH_SHORT);
+        toast.setGravity(Gravity.TOP, 0, 0);
+        toast.show();
     }
 }
