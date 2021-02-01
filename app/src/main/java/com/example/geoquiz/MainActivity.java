@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         Toast toast = Toast.makeText(this, messageResId, Toast.LENGTH_SHORT);
-        toast.setGravity(Gravity.TOP,0,0);
+        toast.setGravity(Gravity.TOP, 0, 0);
         toast.show();
     }
 }
