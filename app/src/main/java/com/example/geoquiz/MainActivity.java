@@ -94,6 +94,20 @@ public class MainActivity extends AppCompatActivity {
         updateQuestion();
     }
 
+    private void prevQuestion() {
+        if (mCurrentIndex == 0) {
+            mCurrentIndex = mQuestionBank.length - 1;
+        } else {
+            mCurrentIndex = (mCurrentIndex - 1) % mQuestionBank.length;
+        }
+        updateQuestion();
+    }
+
+    private void nextQuestion() {
+        mCurrentIndex = (mCurrentIndex + 1) % mQuestionBank.length;
+        updateQuestion();
+    }
+
     @Override
     public void onStart() {
         super.onStart();
